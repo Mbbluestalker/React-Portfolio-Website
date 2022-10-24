@@ -3,6 +3,7 @@ import './header.css'
 import CTA from './CTA'
 import ME from '../../assets/me.png'
 import HeaderSocials from './HeaderSocials'
+import WOLE from '../../assets/wole2-removebg-preview.png'
 
 const Header = () => {
   return (
@@ -15,7 +16,8 @@ const Header = () => {
         <HeaderSocials />
 
         <div className="me">
-          <img src={ME} alt="me" />
+          {/* <img src={ME} alt="me" /> */}
+          <img src={WOLE} alt="" />
         </div>
 
         <a href="#contact" className='scroll__down'>Scroll Down</a>
