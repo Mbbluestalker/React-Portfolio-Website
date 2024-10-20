@@ -9,22 +9,45 @@ import IMG6 from "../../assets/portfolio6.jpg";
 import KoKoCore from "../../assets/koko_core.png";
 import KokoPatient from "../../assets/koko_patient.png";
 import RealCousins from "../../assets/real_cousins.png";
+import Paydai from "../../assets/Paydai-Dashboard.png";
 
 const data = [
   {
     id: 1,
     image: IMG5,
     title: "African Proverb - React / Next JS",
-    github: "https://github.com/",
+    github: "https://github.com/Mbbluestalker/",
     demo: "http://dev.africanproverbs.com/",
+  },
+  {
+    id: 8,
+    image: Paydai,
+    title: "Paydai Web-App - React JS",
+    github: "https://github.com/Mbbluestalker/paydai-web-app",
+    demo: "http://appstage.itspaydai.com/",
+  },
+  {
+    id: 7,
+    image: RealCousins,
+    title: "Real Cousins - React / Next JS",
+    github: "https://github.com/Mbbluestalker",
+    demo: "https://dev.realcousins.com/",
   },
 
   {
-    id: 2,
-    image: IMG1,
-    title: "Dispatch Buddy WebApp- React/NodeJs",
+    id: 5,
+    image: KoKoCore,
+    title: "Koko Core - React / Next JS",
     github: "https://github.com/Mbbluestalker",
-    demo: "https://dispatch-buddy.netlify.app/",
+    demo: "https://kokocore.calmglobal.com/",
+  },
+
+  {
+    id: 6,
+    image: KokoPatient,
+    title: "Koko Patient - React / Next JS",
+    github: "https://github.com/Mbbluestalker",
+    demo: "https://kokopatient.calmglobal.com/",
   },
 
   {
@@ -43,27 +66,12 @@ const data = [
   },
 
   {
-    id: 5,
-    image: KoKoCore,
-    title: "Koko Core - React / Next JS",
+    id: 2,
+    image: IMG1,
+    title: "Dispatch Buddy WebApp- React/NodeJs",
     github: "https://github.com/Mbbluestalker",
-    demo: 'https://kokocore.calmglobal.com/'
+    demo: "https://dispatch-buddy.netlify.app/",
   },
-
-  {
-    id: 6,
-    image: KokoPatient,
-    title: "Koko Patient - React / Next JS",
-    github: "https://github.com/Mbbluestalker",
-    demo: 'https://kokopatient.calmglobal.com/'
-  },
-  {
-    id: 7,
-    image: RealCousins,
-    title: "Real Cousins - React / Next JS",
-    github: "https://github.com/Mbbluestalker",
-    demo: 'https://dev.realcousins.com/'
-  }
 ];
 
 const Portfolio = () => {
@@ -76,8 +84,12 @@ const Portfolio = () => {
         {data.map(({ id, image, title, github, demo }) => {
           return (
             <article key={id} className="portfolio__item">
-              <div className="portfolio__item-image">
-                <img src={image} alt="" />
+              <div className="portfolio__item-image relative aspect-video w-full">
+                <img
+                  src={image}
+                  alt=""
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
               </div>
               <h3>{title}</h3>
               <div className="portfolio__item-cta">
